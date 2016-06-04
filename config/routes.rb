@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'beers/:name' => 'beers#main'
+  get 'beers' => 'beers#main'
 end
