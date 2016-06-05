@@ -4,6 +4,7 @@ module Brewerydb
       @client = Base.new.client
       @type = "beer"
       @endpoint = "/search"
+      @beer_name = URI.encode(beer_name)
     end
 
     def description
