@@ -1,7 +1,6 @@
 module Brewerydb
   class Base
-    def initialize(beer_name: "Budweiser")
-      @beer_name = beer_name
+    def initialize
       @base_url = "http://api.brewerydb.com"
       @version = "/v2"
       @api_key = "7c232372effd9a6ae4edf1494e8e1901"

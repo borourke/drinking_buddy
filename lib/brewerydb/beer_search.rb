@@ -1,7 +1,7 @@
 module Brewerydb
-  class BeerSearch < Base
+  class BeerSearch
     def initialize(beer_name: "Budweiser")
-      super
+      @client = Base.new.client
       @type = "beer"
       @endpoint = "/search"
     end
