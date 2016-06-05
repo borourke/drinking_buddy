@@ -14,8 +14,8 @@ module Brewerydb
       end
     end
 
-    def get(url:, params:)
-      response = client.get(@version + @endpoint, params.merge({key: @api_key}))
+    def get(endpoint:, params:)
+      response = client.get(@version + endpoint, params.merge({key: @api_key}))
       JSON.parse(response.body)
     end
   end
