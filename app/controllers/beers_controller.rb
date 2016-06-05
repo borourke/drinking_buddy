@@ -15,7 +15,7 @@ class BeersController < ApplicationController
   end
 
   def get_description(beer_name:)
-    response = `curl -X GET 'http://api.brewerydb.com/v2/search?q=budweiser&type=beer&key=7c232372effd9a6ae4edf1494e8e1901'`
+    response = `curl -X GET 'http://api.brewerydb.com/v2/search?q=#{beer_name}&type=beer&key=7c232372effd9a6ae4edf1494e8e1901'`
     parsed = JSON.parse(response)
     parsed["data"].first["description"]
   end
